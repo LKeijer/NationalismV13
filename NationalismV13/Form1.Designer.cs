@@ -37,6 +37,7 @@
             this.goNextFormBtn = new System.Windows.Forms.Button();
             this.trainRadioBtn = new System.Windows.Forms.RadioButton();
             this.testRadioBtn = new System.Windows.Forms.RadioButton();
+            this.testtest = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // checkedListBoxContinents
@@ -132,11 +133,22 @@
             this.testRadioBtn.Text = "Test mode!";
             this.testRadioBtn.UseVisualStyleBackColor = true;
             // 
+            // testtest
+            // 
+            this.testtest.Location = new System.Drawing.Point(497, 267);
+            this.testtest.Name = "testtest";
+            this.testtest.Size = new System.Drawing.Size(187, 142);
+            this.testtest.TabIndex = 9;
+            this.testtest.Text = "random func test button";
+            this.testtest.UseVisualStyleBackColor = true;
+            this.testtest.Click += new System.EventHandler(this.testtest_Click);
+            // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(693, 412);
+            this.ClientSize = new System.Drawing.Size(684, 411);
+            this.Controls.Add(this.testtest);
             this.Controls.Add(this.testRadioBtn);
             this.Controls.Add(this.trainRadioBtn);
             this.Controls.Add(this.goNextFormBtn);
@@ -164,6 +176,7 @@
         private System.Windows.Forms.Button goNextFormBtn;
         private System.Windows.Forms.RadioButton trainRadioBtn;
         private System.Windows.Forms.RadioButton testRadioBtn;
+        private System.Windows.Forms.Button testtest;
     }
 }
 

@@ -12,9 +12,8 @@ namespace NationalismV13
 {
     public partial class mainForm : Form
     {
-        string selectedItems;
-        int selectedIndexes;
-        string s;   // selected item from the checked listbox.
+        List<string> selectedIndexes = new List<string>();
+        trainForm TrainForm;
         int i;      // selected index from the checked listbox.
         public mainForm()
         {
@@ -36,7 +35,7 @@ namespace NationalismV13
             for(i = 0; i < checkedListBoxContinents.CheckedIndices.Count;i++) // a forloop that iterates through all the selected items (index)
             {
                 selectedIndexListBox.Items.Add(checkedListBoxContinents.CheckedIndices[i]);
-                selectedIndexes = i;
+
             }
         }
 
@@ -44,9 +43,12 @@ namespace NationalismV13
         {
             if (trainRadioBtn.Checked == true)
             {
-
+                
+                TrainForm = new trainForm();
+                this.Hide();
+                TrainForm.Show();
             }
-            if (testRadioBtn.Checked == true)
+            if (testRadioBtn.Checked == true) 
             {
 
             }
@@ -54,6 +56,16 @@ namespace NationalismV13
             {
                 MessageBox.Show("Please select a (or multiple) continents");
             }
+        }
+
+        private void testtest_Click(object sender, EventArgs e)
+        {
+            selectedIndexes.Add(checkedListBoxContinents.CheckedItems.ToString()); //trying to display the selected items on screen #failure
+            for(int u = 0; u < selectedIndexes.Count; u++)
+            {
+                MessageBox.Show(u.ToString());
+            }
+
         }
     }
 }

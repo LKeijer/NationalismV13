@@ -15,6 +15,12 @@ namespace NationalismV13
         public trainForm()
         {
             InitializeComponent();
+
+        }
+
+        private void trainForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
